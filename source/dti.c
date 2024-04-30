@@ -28,13 +28,12 @@ __declspec(dllexport) int memquery(HANDLE processHandle, BYTE targetValue) {
                 if (buffer[i] == targetValue) {
                     foundAddresses[foundCount++] = (DWORD)currentAddress + i;
                     if (foundCount >= maxFound) {
-                        // Se atingiu o número máximo de endereços encontrados, retorna imediatamente
                         return foundCount;
                     }
                 }
             }
         } else {
-            return -1; // Erro ao ler a memória do processo
+            return -1;
         }
     }
 
