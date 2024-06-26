@@ -1,2 +1,3 @@
 # about
-- not finished
+- for windows
+- i have never finished it
